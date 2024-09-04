@@ -1,0 +1,52 @@
+h3{
+    font-family: cursive;
+    color: darkgreen;
+}
+
+.Você{
+    margin-left: 440px;
+}
+
+.borda{
+    width: 860px;         
+    height: 340px;       
+    border: 2px solid #000; 
+    border-radius: 5px;  
+}
+
+.Atendente{
+    margin-left: 20px;
+
+}
+
+.eu{
+    margin-left: 320px;
+}
+
+.input-container {
+    display: flex;
+}
+
+.digite {
+    flex: 5;
+    padding: 6px;
+    font-size: 16px;
+    border-style:groove;
+    margin: 20px auto;
+}
+
+button {
+    margin: 20px auto;
+    width: 140px;
+    padding: 5px;
+    color: white;
+    background-color: darkgreen;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.esse{
+    margin-left: 340px;
+}

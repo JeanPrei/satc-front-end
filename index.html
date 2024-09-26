@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Online</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div id="chat-container">
+        <div id="messages"></div>
+        <form id="message-form">
+            <input type="text" id="message-input" placeholder="Digite sua mensagem aqui..." required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script>document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('message-form');
+    const input = document.getElementById('message-input');
+    const messagesContainer = document.getElementById('messages');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Previne o envio do formulário
+
+        const messageText = input.value.trim();
+        if (messageText) {
+            // Cria um novo elemento de mensagem
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message');
+            messageElement.textContent = messageText;
+
+            // Adiciona a nova mensagem ao container
+            messagesContainer.appendChild(messageElement);
+
+            // Limpa o input
+            input.value = '';
+
+            // Rola para a última mensagem
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+    });
+});
+</script>
